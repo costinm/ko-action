@@ -36,7 +36,7 @@ jobs:
 
       - name: Test
         id: test
-        uses: costinm/ko-action/ko@v1
+        uses: costinm/ko-action@v1
         with:
           tag: test
           repo: ghcr.io/costin/ko-action/kotest

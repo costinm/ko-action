@@ -1,5 +1,5 @@
 # action.yml
-name: 'Ko'
+name: 'costinmKoAction'
 description: 'Build and push with ko'
 inputs:
   path:  # path to go command
