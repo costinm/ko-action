@@ -10,12 +10,17 @@ inputs:
     description: 'Tag'
     required: false
     default: 'latest'
+  repo:
+    description: 'Repo'
+    required: yes
 outputs:
   sha: # id of output
     description: 'Sha of the image'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    KO_DOCKER_REPO: ${{ repo }}
   args:
     - ${{ inputs.path }}
     - "-t"

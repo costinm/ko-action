@@ -36,9 +36,10 @@ jobs:
 
       - name: Test
         id: test
-        uses: costinm/ko-action@v1
+        uses: costinm/ko-action/ko@v1
         with:
           tag: test
+          repo: ghcr.io/costin/ko-action/kotest
 
       - name: Get the output time
         run: echo "The time was ${{ steps.test.outputs.sha }}"
