@@ -1,0 +1,23 @@
+# action.yml
+name: 'Ko'
+description: 'Build and push with ko'
+inputs:
+  path:  # path to go command
+    description: 'Path to go command'
+    required: false
+    default: './'
+  tag:
+    description: 'Tag'
+    required: false
+    default: 'latest'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - "-t"
+    - ${{ inputs.tag }}
+
