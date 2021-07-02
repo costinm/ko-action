@@ -29,7 +29,16 @@ jobs:
         with:
           push: true
           context: .
+          local: true
           file: ./Dockerfile
           tags: |
             ghcr.io/costinm/ko-action/ko:v1
 
+      - name: Test
+        id: test
+        uses: costinm/ko-action@v1
+        with:
+          tag: test
+
+      - name: Get the output time
+        run: echo "The time was ${{ steps.test.outputs.sha }}"

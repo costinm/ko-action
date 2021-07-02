@@ -11,8 +11,8 @@ inputs:
     required: false
     default: 'latest'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  sha: # id of output
+    description: 'Sha of the image'
 runs:
   using: 'docker'
   image: 'Dockerfile'
